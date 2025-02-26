@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -27,6 +28,8 @@
         android:id="@+id/nome_et"
         android:hint="@string/digite_seu_nome"
         android:textSize="24sp"
+        android:inputType="text"
+
         />
     <TextView
         android:layout_width="match_parent"
@@ -35,12 +38,14 @@
         android:labelFor="@+id/telefone_et"
         android:text="@string/telefone_tvText"
         android:textSize="24sp"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/telefone_et"
         android:hint="@string/telefone_hint"
         android:textSize="24sp"
+        android:inputType="text"
         />
     <TextView
         android:layout_width="match_parent"
@@ -56,9 +61,11 @@
         android:id="@+id/email_et"
         android:hint="@string/email_hintText"
         android:textSize="24sp"
+        android:inputType="text"
         />
 
     <CheckBox
+        android:id = "@+id/interesse_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="true"
@@ -73,7 +80,7 @@
         android:textSize="16sp"
         />
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/sexo_rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -93,6 +100,60 @@
 
 
     </RadioGroup>
+    <TextView
+        android:id="@+id/cidade_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cidade"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/cidade_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua cidade"
+        android:inputType="text"
+        android:minHeight="48dp" />
+    <TextView
+        android:id="@+id/UF_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UF"
+        android:textSize="24sp"
+        />
+
+    <Spinner
+        android:id="@+id/uf_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/uf"
+        android:minHeight="48dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/limpar_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="limpar"
+            android:background="@color/purple_200"
+            />
+
+
+        <Button
+            android:id="@+id/salvar_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="salvar"
+            android:background="@color/purple_200"
+
+            />
+
+    </LinearLayout>
 
 
 
