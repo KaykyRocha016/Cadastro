@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cadastro</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="nome">Nome completo</string>
+    <string name="email">Email</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="telefone_hint">Digite o telefone ex:xx-xxxxxxxxx</string>
+    <string name="email_hintText">Digite seu email</string>
+    <string name="telefone_tvText">Telefone</string>
+    <string name="email_cbText">ingressar na lista de e-mails?</string>
+    <string name="sexo_tvText">Sexo</string>
+</resources>
