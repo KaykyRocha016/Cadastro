@@ -1,7 +1,9 @@
 package com.example.cadastro
 
+import android.app.Application
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -30,23 +32,27 @@ class MainActivity : AppCompatActivity() {
                 saveForm()
             }
             limparBt.setOnClickListener{
-                nomeEt.text.clear();
-
-                telefoneEt.text.clear()
-
-                cidadeEt.text.clear()
-
-                emailEt.text.clear()
-
-                mascRb.isChecked=false
-
-                femRb.isChecked=false
+                clearForm()
 
 
             }
 
 
         }
+    }
+
+    private fun ActivityMainBinding.clearForm() {
+        nomeEt.text.clear();
+
+        telefoneEt.text.clear()
+
+        cidadeEt.text.clear()
+
+        emailEt.text.clear()
+
+        mascRb.isChecked = false
+
+        femRb.isChecked = false
     }
 
     private fun ActivityMainBinding.saveForm() {
@@ -66,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         } else formulario.sexo = Sexo.FEMININO
 
         formulario.interesse = interesseCb.isChecked
+        Toast.makeText(baseContext, formulario.toString(),Toast.LENGTH_SHORT).show()
 
         Log.d("Formulario", formulario.toString())
     }

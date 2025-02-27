@@ -40,7 +40,8 @@
             android:hint="@string/nomeEtText"
             android:textSize="24sp"
             android:inputType="text"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            />
 
         <!-- Telefone -->
         <TextView
@@ -178,6 +179,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/salvarBtText"
                 android:background="@color/purple_200" />
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
