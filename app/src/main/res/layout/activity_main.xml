@@ -1,169 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_cadastro"
-        android:text="@string/cadastro"
-        android:textSize="32sp"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-        android:background="@color/purple_200"
-
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nome_tv"
-        android:text="@string/nome"
-        android:textSize="24sp"
-        android:labelFor="@+id/nome_et"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nome_et"
-        android:hint="@string/digite_seu_nome"
-        android:textSize="24sp"
-        android:inputType="text"
-
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/telefone_tv"
-        android:labelFor="@+id/telefone_et"
-        android:text="@string/telefone_tvText"
-        android:textSize="24sp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/telefone_et"
-        android:hint="@string/telefone_hint"
-        android:textSize="24sp"
-        android:inputType="text"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/email_tv"
-        android:labelFor="@+id/email_et"
-        android:text="@string/email"
-        android:textSize="24sp"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/email_et"
-        android:hint="@string/email_hintText"
-        android:textSize="24sp"
-        android:inputType="text"
-        />
-
-    <CheckBox
-        android:id = "@+id/interesse_cb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:minHeight="48dp"
-        android:text="@string/email_cbText"
-        android:textSize="16sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sexo_tv"
-        android:text="@string/sexo_tvText"
-        android:textSize="16sp"
-        />
-    <RadioGroup
-        android:id="@+id/sexo_rg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/masc_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Masculino"/>
-
-        <RadioButton
-            android:id="@+id/fem_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Feminino"/>
-
-
-
-    </RadioGroup>
-    <TextView
-        android:id="@+id/cidade_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cidade"
-        android:textSize="24sp"
-        />
-
-    <EditText
-        android:id="@+id/cidade_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite sua cidade"
-        android:inputType="text"
-        android:minHeight="48dp" />
-    <TextView
-        android:id="@+id/UF_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="UF"
-        android:textSize="24sp"
-        />
-
-    <Spinner
-        android:id="@+id/uf_sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/uf"
-        android:minHeight="48dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/limpar_bt"
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_cadastro"
+            android:text="@string/cadastro"
+            android:textSize="32sp"
+            android:background="@color/purple_200"
+            android:padding="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Nome -->
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="limpar"
-            android:background="@color/purple_200"
-            />
+            android:id="@+id/nome_tv"
+            android:text="@string/nome"
+            android:textSize="24sp"
+            android:labelFor="@+id/nome_et"
+            android:layout_marginBottom="8dp" />
 
-
-        <Button
-            android:id="@+id/salvar_bt"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="salvar"
-            android:background="@color/purple_200"
+            android:id="@+id/nome_et"
+            android:hint="@string/nomeEtText"
+            android:textSize="24sp"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
 
-            />
+        <!-- Telefone -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/telefone_tv"
+            android:labelFor="@+id/telefone_et"
+            android:text="@string/telefone_tvText"
+            android:textSize="24sp"
+            android:layout_marginBottom="8dp" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/telefone_et"
+            android:hint="@string/telefone_hint"
+            android:textSize="24sp"
+            android:inputType="phone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- E-mail -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_tv"
+            android:labelFor="@+id/email_et"
+            android:text="@string/email"
+            android:textSize="24sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_et"
+            android:hint="@string/email_hintText"
+            android:textSize="24sp"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CheckBox -->
+        <CheckBox
+            android:id="@+id/interesse_cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="@string/email_cbText"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sexo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sexo_tv"
+            android:text="@string/sexo_tvText"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/sexo_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/masc_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/masculinoRbText"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/fem_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/femininoRbText" />
+        </RadioGroup>
+
+        <!-- Cidade -->
+        <TextView
+            android:id="@+id/cidade_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cidadeTvText"
+            android:textSize="24sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/cidade_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cidadeEtText"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- UF -->
+        <TextView
+            android:id="@+id/UF_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ufSpText"
+            android:textSize="24sp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/uf_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/ufOptions"
+            android:minHeight="48dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botões -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/limpar_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/limparBtText"
+                android:background="@color/purple_200"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/salvar_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salvarBtText"
+                android:background="@color/purple_200" />
+        </LinearLayout>
     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+</ScrollView>

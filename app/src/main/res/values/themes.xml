@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Cadastro" parent="android:Theme.Material.Light.NoActionBar" />
+
+        <!-- Tema base do AppCompat -->
+        <style name="Theme.Cadastro" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Personalizações do tema -->
+            <item name="colorPrimary">@color/purple_500</item>
+
+        </style>
+
 </resources>

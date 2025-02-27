@@ -14,6 +14,9 @@ class Formulario {
      var cidade: String = ""
 
      var unidadeFederal : String = ""
+     override fun toString(): String {
+          return "Formulario(nome='$nome', telefone='$telefone', email='$email', interesse=$interesse, sexo=$sexo, cidade='$cidade', unidadeFederal='$unidadeFederal')"
+     }
 
 
 }

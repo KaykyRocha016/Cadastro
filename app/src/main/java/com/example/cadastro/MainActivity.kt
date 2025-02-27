@@ -1,6 +1,7 @@
 package com.example.cadastro
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -26,40 +27,48 @@ class MainActivity : AppCompatActivity() {
         setContentView(activityMainBinding.root)
         with(activityMainBinding){
             salvarBt.setOnClickListener{
-                val formulario= Formulario()
-                formulario.nome= nomeEt.text.toString()
+                saveForm()
+            }
+            limparBt.setOnClickListener{
+                nomeEt.text.clear();
 
+                telefoneEt.text.clear()
 
+                cidadeEt.text.clear()
 
-                formulario.email = emailEt.text.toString()
+                emailEt.text.clear()
 
-                formulario.telefone= telefoneEt.text.toString()
+                mascRb.isChecked=false
 
-                formulario.cidade= cidadeEt.text.toString()
-
-                formulario.unidadeFederal= ufSp.selectedItem.toString()
-
-
-
-                if(mascRb.isChecked){
-                    formulario.sexo= Sexo.MASCULINO
-                }
-                else formulario.sexo= Sexo.FEMININO
-
-                if (interesseCb.isChecked) formulario.interesse=true
-                else formulario.interesse=false
-
-                println(formulario.toString())
-
-
-
+                femRb.isChecked=false
 
 
             }
 
+
         }
     }
 
+    private fun ActivityMainBinding.saveForm() {
+        val formulario = Formulario()
+        formulario.nome = nomeEt.text.toString()
+
+        formulario.email = emailEt.text.toString()
+
+        formulario.telefone = telefoneEt.text.toString()
+
+        formulario.cidade = cidadeEt.text.toString()
+
+        formulario.unidadeFederal = ufSp.selectedItem.toString()
+
+        if (mascRb.isChecked) {
+            formulario.sexo = Sexo.MASCULINO
+        } else formulario.sexo = Sexo.FEMININO
+
+        formulario.interesse = interesseCb.isChecked
+
+        Log.d("Formulario", formulario.toString())
+    }
 
 
 }

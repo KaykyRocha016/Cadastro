@@ -3,13 +3,20 @@
     <string name="cadastro">Cadastro</string>
     <string name="nome">Nome completo</string>
     <string name="email">Email</string>
-    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="nomeEtText">Digite seu nome</string>
     <string name="telefone_hint">Digite o telefone ex:xx-xxxxxxxxx</string>
     <string name="email_hintText">Digite seu email</string>
     <string name="telefone_tvText">Telefone</string>
     <string name="email_cbText">ingressar na lista de e-mails?</string>
     <string name="sexo_tvText">Sexo</string>
-    <string-array name="uf">
+    <string name="limparBtText">limpar</string>
+    <string name="salvarBtText">salvar</string>
+    <string name="ufSpText">UF</string>
+    <string name="cidadeEtText">Digite sua cidade</string>
+    <string name="cidadeTvText">Cidade</string>
+    <string name="femininoRbText">Feminino</string>
+    <string name="masculinoRbText">Masculino</string>
+    <string-array name="ufOptions">
         <item>Acre (AC)</item>
         <item>Alagoas (AL)</item>
         <item>Amapá (AP)</item>
