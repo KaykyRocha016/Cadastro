@@ -56,22 +56,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ActivityMainBinding.saveForm() {
-        val formulario = Formulario()
-        formulario.nome = nomeEt.text.toString()
+        var sexo : Sexo
+        if(mascRb.isChecked)sexo = Sexo.MASCULINO
+        else sexo = Sexo.FEMININO
 
-        formulario.email = emailEt.text.toString()
+        val formulario = Formulario(
+            nomeEt.text.toString(),
+            telefoneEt.text.toString(),
+            emailEt.text.toString(),
+            interesseCb.isChecked,
+            sexo,
+            cidadeEt.text.toString(),
+            ufSp.selectedItem.toString()
+            )
 
-        formulario.telefone = telefoneEt.text.toString()
 
-        formulario.cidade = cidadeEt.text.toString()
-
-        formulario.unidadeFederal = ufSp.selectedItem.toString()
-
-        if (mascRb.isChecked) {
-            formulario.sexo = Sexo.MASCULINO
-        } else formulario.sexo = Sexo.FEMININO
-
-        formulario.interesse = interesseCb.isChecked
         Toast.makeText(baseContext, formulario.toString(),Toast.LENGTH_SHORT).show()
 
         Log.d("Formulario", formulario.toString())
